@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
-interface NavItem { to: string; label: string }
+interface NavItem { to: any; label: string }
 
 interface Props {
   eyebrow?: string;
@@ -36,6 +36,7 @@ export function ChapterPage({ eyebrow, title, subtitle, pageNumber, prev, next, 
             <span><span className="block text-xs text-muted-foreground">הקודם</span><span className="font-semibold">{prev.label}</span></span>
           </Link>
         ) : <span />}
+        <Link to="/" className="order-last inline-flex items-center justify-center rounded-md bg-gold px-4 py-3 text-sm font-bold text-navy transition hover:brightness-110 sm:order-none">חזרה לדף הבית של שמיים</Link>
         {next ? (
           <Link to={next.to} className="group inline-flex items-center gap-2 rounded-md border border-border bg-paper px-4 py-3 text-sm transition-colors hover:border-gold hover:bg-gold-soft">
             <span><span className="block text-xs text-muted-foreground">הבא</span><span className="font-semibold">{next.label}</span></span>
