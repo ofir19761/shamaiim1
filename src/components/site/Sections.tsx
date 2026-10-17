@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { WhatsAppIcon, WHATSAPP_URL } from "./WhatsApp";
 import { useState } from "react";
 import { z } from "zod";
 import { Compass, LineChart, Rocket, Feather, Quote, ArrowLeft, CheckCircle2, BookOpen } from "lucide-react";
