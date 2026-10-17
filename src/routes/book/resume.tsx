@@ -1,34 +1,79 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { meta } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/book/resume")({
-  head: () => meta("הרזומה והמחבר — אופיר לוי | ערך מוסף", "פרופיל מקצועי מורחב על אופיר לוי: מעל 20 שנה בייעוץ עסקי וניהול כספים בכיר בלי קופר, ארומה תל אביב וסאקס."),
-  component: () => (
-    <article className="mx-auto max-w-3xl px-6 py-20">
-      <p className="text-sm font-bold text-gold">נספח</p>
-      <h1 className="mb-10 text-5xl font-bold">הרזומה והמחבר</h1>
-      <div className="prose-book">
-        <p>אופיר לוי הוא יועץ עסקי ופיננסי ומייסד ״שמיים — ייעוץ עסקי, פיתוח עסקי ופיננסי״. במשך למעלה מעשרים שנה מילא תפקידי ניהול כספים בכירים בחברות מובילות במשק, ומאז הוא מלווה בעלי עסקים ויזמים בבניית עסקים יציבים ורווחיים.</p>
-        <h2>תחנות מרכזיות</h2>
-        <ul>
-          <li><strong>Lee Cooper Jeans</strong> — ניהול כספים בכיר, בקרה תקציבית וניהול תזרים ברשת קמעונאית.</li>
-          <li><strong>ארומה תל אביב</strong> — ניהול כספים בכיר ברשת מזון מהגדולות בישראל, עבודה מול זכיינים וספקים.</li>
-          <li><strong>Sack's</strong> — ניהול כספים בכיר, משא ומתן מול ספקים ובנקים ובניית מערכי דיווח ניהוליים.</li>
-          <li><strong>שמיים</strong> — ייעוץ וליווי עסקי ופיננסי לעסקים קטנים ובינוניים וליזמים.</li>
-        </ul>
-        <h2>תחומי מומחיות</h2>
-        <ul>
-          <li>אסטרטגיה ופיתוח עסקי</li>
-          <li>תזרים מזומנים, תקציב ובקרה</li>
-          <li>משא ומתן מול ספקים, בנקים ושותפים</li>
-          <li>ליווי יזמים מהרעיון ועד ההשקה</li>
-        </ul>
-        <blockquote>״המטרה שלי פשוטה: שבעל עסק קטן ינהל את העסק שלו כמו עסק גדול.״</blockquote>
-      </div>
-      <div className="mt-12 flex flex-wrap justify-between gap-4 border-t border-border pt-8">
-        <Link to="/book/$slug" params={{ slug: "chapter-4" }} className="font-semibold text-slate hover:text-gold">→ פרק ד׳</Link>
-        <Link to="/contact" className="rounded-sm bg-gold px-6 py-3 font-bold text-navy">לתיאום פגישת היכרות</Link>
-      </div>
-    </article>
-  ),
+  head: () => ({
+    meta: [
+      { title: "הרזומה שלי בקצרה — אופיר לוי" },
+      { name: "description", content: "אופיר לוי — רואה חשבון ויועץ עסקי בעל ניסיון של יותר מ־15 שנה במגזר העסקי." },
+      { property: "og:title", content: "הרזומה שלי בקצרה — אופיר לוי" },
+      { property: "og:description", content: "אופיר לוי — רואה חשבון ויועץ עסקי בעל ניסיון של יותר מ־15 שנה במגזר העסקי." },
+      { property: "og:type", content: "article" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: Resume,
 });
+
+function Resume() {
+  return (
+    <article className="mx-auto max-w-3xl px-5 py-14 sm:py-20">
+      <header className="mb-10">
+        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-gold">סיומת הספר</p>
+        <h1 className="mt-2 font-serif text-4xl font-bold sm:text-5xl">הרזומה שלי בקצרה</h1>
+      </header>
+
+      <div className="grid gap-10 sm:grid-cols-[200px_1fr] sm:gap-12">
+        {/* Photo placeholder */}
+        <div>
+          <div className="aspect-[3/4] w-full overflow-hidden rounded-lg border-2 border-dashed border-gold bg-card">
+            <div className="flex h-full w-full flex-col items-center justify-center p-4 text-center">
+              <svg className="mb-3 h-10 w-10 text-muted-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6" />
+              </svg>
+              <p className="text-xs font-semibold text-muted-foreground">מקום לתמונה</p>
+              <p className="mt-1 text-[11px] text-muted-foreground">התמונה תועלה בהמשך</p>
+            </div>
+          </div>
+          <p className="mt-3 text-center font-serif text-lg font-bold">אופיר לוי</p>
+          <p className="text-center text-sm text-muted-foreground">רואה חשבון ויועץ עסקי</p>
+        </div>
+
+        <div className="prose-book">
+          <p>
+            רואה חשבון ויועץ עסקי בעל ניסיון של יותר מ־15 שנה במגזר העסקי. התחלתי
+            את הקריירה המקצועית שלי בארנסט אנד יאנג (משרד רואי החשבון הגדול
+            בישראל). עבדתי מול חברות מובילות מתחומי פעילות שונים.
+          </p>
+          <p>
+            לאחר מכן, עברתי לתפקידי חשבות וניהול כספים בחברות עסקיות שונות:
+            <strong> Lee Cooper Jeans</strong>, <strong>ארומה תל אביב</strong>,
+            <strong> ״כרמל פלור דיזיין״</strong> ורשת האופנה המובילה לנשים
+            <strong> SACK'S</strong>.
+          </p>
+          <p>
+            בשנים האחרונות, אני מייעץ לעסקים באמצעות <strong>״שמים — מימוש שאיפות
+            עסקיות״</strong>.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            מוזמנים לקרוא בהרחבה בבלוג שלי:{" "}
+            <a href="https://www.shamaiim.co.il/blog/resume" target="_blank" rel="noreferrer" className="font-semibold text-gold hover:underline">
+              shamaiim.co.il/blog/resume
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <nav className="mt-16 flex flex-col-reverse gap-3 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <Link to="/book/chapter-4" className="inline-flex items-center gap-2 rounded-md border border-border bg-paper px-4 py-3 text-sm hover:border-gold hover:bg-gold-soft">
+          <span aria-hidden>→</span>
+          <span><span className="block text-xs text-muted-foreground">הקודם</span><span className="font-semibold">פרק רביעי — ניהול פיננסי</span></span>
+        </Link>
+        <Link to="/" className="inline-flex items-center gap-2 rounded-md border border-border bg-paper px-4 py-3 text-sm hover:border-gold hover:bg-gold-soft">
+          <span><span className="block text-xs text-muted-foreground">חזרה</span><span className="font-semibold">לעמוד הראשי</span></span>
+          <span aria-hidden>←</span>
+        </Link>
+      </nav>
+    </article>
+  );
+}

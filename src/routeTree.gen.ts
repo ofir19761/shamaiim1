@@ -16,7 +16,11 @@ import { Route as BookRouteImport } from './routes/book'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as BookIndexRouteImport } from './routes/book/index'
-import { Route as BookSlugRouteImport } from './routes/book/$slug'
+import { Route as BookChapter1RouteImport } from './routes/book/chapter-1'
+import { Route as BookChapter2RouteImport } from './routes/book/chapter-2'
+import { Route as BookChapter3RouteImport } from './routes/book/chapter-3'
+import { Route as BookChapter4RouteImport } from './routes/book/chapter-4'
+import { Route as BookPrefaceRouteImport } from './routes/book/preface'
 import { Route as BookResumeRouteImport } from './routes/book/resume'
 import { Route as BookTocRouteImport } from './routes/book/toc'
 
@@ -55,9 +59,29 @@ const BookIndexRoute = BookIndexRouteImport.update({
   path: '/',
   getParentRoute: () => BookRoute,
 } as any)
-const BookSlugRoute = BookSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
+const BookChapter1Route = BookChapter1RouteImport.update({
+  id: '/chapter-1',
+  path: '/chapter-1',
+  getParentRoute: () => BookRoute,
+} as any)
+const BookChapter2Route = BookChapter2RouteImport.update({
+  id: '/chapter-2',
+  path: '/chapter-2',
+  getParentRoute: () => BookRoute,
+} as any)
+const BookChapter3Route = BookChapter3RouteImport.update({
+  id: '/chapter-3',
+  path: '/chapter-3',
+  getParentRoute: () => BookRoute,
+} as any)
+const BookChapter4Route = BookChapter4RouteImport.update({
+  id: '/chapter-4',
+  path: '/chapter-4',
+  getParentRoute: () => BookRoute,
+} as any)
+const BookPrefaceRoute = BookPrefaceRouteImport.update({
+  id: '/preface',
+  path: '/preface',
   getParentRoute: () => BookRoute,
 } as any)
 const BookResumeRoute = BookResumeRouteImport.update({
@@ -78,7 +102,11 @@ export interface FileRoutesByFullPath {
   '/book': typeof BookRouteWithChildren
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
-  '/book/$slug': typeof BookSlugRoute
+  '/book/chapter-1': typeof BookChapter1Route
+  '/book/chapter-2': typeof BookChapter2Route
+  '/book/chapter-3': typeof BookChapter3Route
+  '/book/chapter-4': typeof BookChapter4Route
+  '/book/preface': typeof BookPrefaceRoute
   '/book/resume': typeof BookResumeRoute
   '/book/toc': typeof BookTocRoute
   '/book/': typeof BookIndexRoute
@@ -89,7 +117,11 @@ export interface FileRoutesByTo {
   '/articles': typeof ArticlesRoute
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
-  '/book/$slug': typeof BookSlugRoute
+  '/book/chapter-1': typeof BookChapter1Route
+  '/book/chapter-2': typeof BookChapter2Route
+  '/book/chapter-3': typeof BookChapter3Route
+  '/book/chapter-4': typeof BookChapter4Route
+  '/book/preface': typeof BookPrefaceRoute
   '/book/resume': typeof BookResumeRoute
   '/book/toc': typeof BookTocRoute
   '/book': typeof BookIndexRoute
@@ -102,7 +134,11 @@ export interface FileRoutesById {
   '/book': typeof BookRouteWithChildren
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
-  '/book/$slug': typeof BookSlugRoute
+  '/book/chapter-1': typeof BookChapter1Route
+  '/book/chapter-2': typeof BookChapter2Route
+  '/book/chapter-3': typeof BookChapter3Route
+  '/book/chapter-4': typeof BookChapter4Route
+  '/book/preface': typeof BookPrefaceRoute
   '/book/resume': typeof BookResumeRoute
   '/book/toc': typeof BookTocRoute
   '/book/': typeof BookIndexRoute
@@ -116,7 +152,11 @@ export interface FileRouteTypes {
     | '/book'
     | '/contact'
     | '/services'
-    | '/book/$slug'
+    | '/book/chapter-1'
+    | '/book/chapter-2'
+    | '/book/chapter-3'
+    | '/book/chapter-4'
+    | '/book/preface'
     | '/book/resume'
     | '/book/toc'
     | '/book/'
@@ -127,7 +167,11 @@ export interface FileRouteTypes {
     | '/articles'
     | '/contact'
     | '/services'
-    | '/book/$slug'
+    | '/book/chapter-1'
+    | '/book/chapter-2'
+    | '/book/chapter-3'
+    | '/book/chapter-4'
+    | '/book/preface'
     | '/book/resume'
     | '/book/toc'
     | '/book'
@@ -139,7 +183,11 @@ export interface FileRouteTypes {
     | '/book'
     | '/contact'
     | '/services'
-    | '/book/$slug'
+    | '/book/chapter-1'
+    | '/book/chapter-2'
+    | '/book/chapter-3'
+    | '/book/chapter-4'
+    | '/book/preface'
     | '/book/resume'
     | '/book/toc'
     | '/book/'
@@ -205,11 +253,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BookIndexRouteImport
       parentRoute: typeof BookRoute
     }
-    '/book/$slug': {
-      id: '/book/$slug'
-      path: '/$slug'
-      fullPath: '/book/$slug'
-      preLoaderRoute: typeof BookSlugRouteImport
+    '/book/chapter-1': {
+      id: '/book/chapter-1'
+      path: '/chapter-1'
+      fullPath: '/book/chapter-1'
+      preLoaderRoute: typeof BookChapter1RouteImport
+      parentRoute: typeof BookRoute
+    }
+    '/book/chapter-2': {
+      id: '/book/chapter-2'
+      path: '/chapter-2'
+      fullPath: '/book/chapter-2'
+      preLoaderRoute: typeof BookChapter2RouteImport
+      parentRoute: typeof BookRoute
+    }
+    '/book/chapter-3': {
+      id: '/book/chapter-3'
+      path: '/chapter-3'
+      fullPath: '/book/chapter-3'
+      preLoaderRoute: typeof BookChapter3RouteImport
+      parentRoute: typeof BookRoute
+    }
+    '/book/chapter-4': {
+      id: '/book/chapter-4'
+      path: '/chapter-4'
+      fullPath: '/book/chapter-4'
+      preLoaderRoute: typeof BookChapter4RouteImport
+      parentRoute: typeof BookRoute
+    }
+    '/book/preface': {
+      id: '/book/preface'
+      path: '/preface'
+      fullPath: '/book/preface'
+      preLoaderRoute: typeof BookPrefaceRouteImport
       parentRoute: typeof BookRoute
     }
     '/book/resume': {
@@ -230,14 +306,22 @@ declare module '@tanstack/react-router' {
 }
 
 interface BookRouteChildren {
-  BookSlugRoute: typeof BookSlugRoute
+  BookChapter1Route: typeof BookChapter1Route
+  BookChapter2Route: typeof BookChapter2Route
+  BookChapter3Route: typeof BookChapter3Route
+  BookChapter4Route: typeof BookChapter4Route
+  BookPrefaceRoute: typeof BookPrefaceRoute
   BookResumeRoute: typeof BookResumeRoute
   BookTocRoute: typeof BookTocRoute
   BookIndexRoute: typeof BookIndexRoute
 }
 
 const BookRouteChildren: BookRouteChildren = {
-  BookSlugRoute: BookSlugRoute,
+  BookChapter1Route: BookChapter1Route,
+  BookChapter2Route: BookChapter2Route,
+  BookChapter3Route: BookChapter3Route,
+  BookChapter4Route: BookChapter4Route,
+  BookPrefaceRoute: BookPrefaceRoute,
   BookResumeRoute: BookResumeRoute,
   BookTocRoute: BookTocRoute,
   BookIndexRoute: BookIndexRoute,
