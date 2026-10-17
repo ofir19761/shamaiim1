@@ -37,7 +37,7 @@ function ArticlePage() {
           <Link to="/articles" search={{ q: "", category: article.category }} className="text-sm font-bold text-slate hover:underline">{article.category}</Link>
           <h1 className="mt-4 break-words text-4xl font-bold leading-tight md:text-5xl">{article.title}</h1>
           <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
-            <span>מאת אופיר לוי</span>{article.date && <span>{article.date}</span>}
+            <span>מאת אופיר לוי</span>
             <span className="flex items-center gap-2"><Clock3 className="size-4" />{readingMinutes(article)} דקות קריאה</span>
           </div>
         </header>
