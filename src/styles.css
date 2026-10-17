@@ -102,6 +102,7 @@
   --gradient-sky: linear-gradient(160deg, var(--navy) 0%, var(--slate) 100%);
   --gradient-gold: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 50%, var(--gold) 100%);
   --shadow-elegant: 0 30px 60px -25px color-mix(in oklab, var(--navy) 45%, transparent);
+  --shadow-portrait: 0 16px 36px -20px color-mix(in oklab, var(--navy) 22%, transparent);
 }
 
 @layer base {
@@ -122,6 +123,7 @@
 @utility bg-sky { background-image: var(--gradient-sky); }
 @utility bg-gold-grad { background-image: var(--gradient-gold); }
 @utility shadow-elegant { box-shadow: var(--shadow-elegant); }
+@utility shadow-portrait { box-shadow: var(--shadow-portrait); }
 @utility prose-book {
   font-size: 1.125rem; line-height: 2; color: var(--foreground);
   & p { margin-bottom: 1.2em; text-align: justify; }

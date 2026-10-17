@@ -3,7 +3,7 @@ import { useState } from "react";
 import { z } from "zod";
 import { Compass, LineChart, Rocket, Feather, Quote, ArrowLeft, CheckCircle2, BookOpen } from "lucide-react";
 import { BOOK_SUBTITLE, BOOK_TITLE } from "@/content/book";
-import portrait from "@/assets/ofir-levi-portrait.jpg.asset.json";
+import { Portrait } from "@/components/site/Portrait";
 import { articles } from "@/content/articles";
 import { ArticleCard } from "@/components/site/ArticleCard";
 import { Button } from "@/components/ui/button";
@@ -71,13 +71,8 @@ const stations = [
 export function About() {
   return (
     <section className="bg-muted">
-      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 py-24 lg:grid-cols-2">
-        <div className="relative mx-auto w-full max-w-sm">
-          <div className="absolute -inset-4 translate-x-6 translate-y-6 border border-gold" />
-          <div className="relative aspect-[4/5] overflow-hidden bg-muted shadow-elegant">
-            <img src={portrait.url} alt="אופיר לוי - יועץ עסקי ופיננסי" width={768} height={768} loading="lazy" className="h-full w-full object-cover object-top" />
-          </div>
-        </div>
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-[280px_minmax(0,1fr)] md:gap-12 lg:gap-16">
+        <Portrait alt="אופיר לוי - יועץ עסקי ופיננסי" />
         <div>
           <Eyebrow>אודות</Eyebrow>
           <h2 className="mb-6 text-4xl font-bold md:text-5xl">אופיר לוי</h2>

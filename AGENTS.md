@@ -12,3 +12,4 @@
 - Keep the uploaded article JSON as the source-controlled content source and use a shared browser-safe article module for search and reading; this preserves the complete archive without requiring a database or hosted search.
 - Use the un-nested `articles_.$slug.tsx` route for full article pages because the existing `/articles` page is a content leaf, not a layout.
 - Reference uploaded portraits through Lovable Assets pointers so media stays off the source repository.
+- Share portrait rendering between About and the book resume through a single component with a compact variant so framing remains consistent across both contexts.
