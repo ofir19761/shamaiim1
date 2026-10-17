@@ -90,6 +90,7 @@ export function About() {
             ))}
           </div>
         </div>
+        <Portrait alt="אופיר לוי - יועץ עסקי ופיננסי" />
       </div>
     </section>
   );
