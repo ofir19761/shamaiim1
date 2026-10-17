@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { BookCover } from "@/components/site/Sections";
 
 export const Route = createFileRoute("/book/")({
   head: () => ({
@@ -42,22 +43,8 @@ function Home() {
             </div>
           </div>
 
-          {/* "Book cover" mock */}
           <div className="relative flex items-center justify-center">
-            <div className="relative w-full max-w-sm">
-              <div className="absolute -bottom-4 -right-4 h-full w-full rounded-md bg-gold/60" />
-              <div className="relative aspect-[3/4] rounded-md bg-card p-8 shadow-xl ring-1 ring-border">
-                <div className="flex h-full flex-col items-center justify-between text-center">
-                  <p className="font-serif text-sm tracking-widest text-muted-foreground">המדריך לעולם<br />העסקים החדש</p>
-                  <div>
-                    <p className="font-serif text-6xl font-bold leading-none text-ink">ערך</p>
-                    <p className="mt-2 font-serif text-6xl font-bold leading-none text-ink">מוסף</p>
-                    <p className="mt-6 text-sm italic text-muted-foreground">כשערכים ועסקים<br />נפגשים בהצלחה</p>
-                  </div>
-                  <p className="font-serif text-lg font-semibold">אופיר לוי</p>
-                </div>
-              </div>
-            </div>
+            <BookCover className="max-w-[360px]" />
           </div>
         </div>
       </section>
@@ -97,6 +84,28 @@ function Home() {
               { to: "/book/chapter-4", label: "פרק רביעי · ניהול פיננסי" },
             ]}
           />
+        </div>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="rounded-lg border border-gold/40 bg-gold-soft p-8">
+            <p className="text-sm font-semibold tracking-[0.18em] text-gold">עותק מודפס</p>
+            <h3 className="mt-2 font-serif text-2xl font-bold">רוצים את הספר על שולחן העבודה?</h3>
+            <p className="mt-3 text-muted-foreground">הספר המלא זמין כאן לקריאה חופשית. ניתן גם להזמין עותק מודפס (96 עמודים) ב-60 ש״ח או עותק דיגיטלי ב-20 ש״ח.</p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href="tel:0545606843" className="inline-flex items-center rounded-md bg-gold px-5 py-3 text-sm font-bold text-navy transition hover:brightness-110">להזמנה: 054-5606843</a>
+              <a href="mailto:Ofir@shamaiim.co.il?subject=הזמנת הספר ערך מוסף" className="inline-flex items-center rounded-md border border-border bg-paper px-5 py-3 text-sm font-medium hover:border-gold">הזמנה במייל</a>
+            </div>
+          </div>
+          <div className="rounded-lg border border-border bg-paper p-8">
+            <p className="text-sm font-semibold tracking-[0.18em] text-gold">קרדיטים</p>
+            <dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-6 gap-y-3 text-base">
+              <dt className="text-muted-foreground">עריכת תוכן</dt><dd className="font-semibold">יוסי דבש</dd>
+              <dt className="text-muted-foreground">עריכה לשונית</dt><dd className="font-semibold">שרון ברזילי</dd>
+              <dt className="text-muted-foreground">עיצוב ועימוד</dt><dd className="font-semibold">סטודיו עפעף</dd>
+              <dt className="text-muted-foreground">דפוס</dt><dd className="font-semibold">גאלה קדם דפוס בע״מ</dd>
+              <dt className="text-muted-foreground">מספר עמודים</dt><dd className="font-semibold">96</dd>
+            </dl>
+          </div>
         </div>
       </section>
     </div>
