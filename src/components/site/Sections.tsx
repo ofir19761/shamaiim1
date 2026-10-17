@@ -46,7 +46,7 @@ export function Services() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-24">
       <Eyebrow>תחומי השירות</Eyebrow>
-      <h2 className="mb-14 max-w-2xl text-4xl font-bold md:text-5xl">ארבעה עוגנים לעסק יציב וצומח</h2>
+      <h2 className="mb-14 max-w-2xl text-4xl font-bold md:text-5xl">איך נוכל לעזור לעסק שלך</h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {services.map(({ icon: Icon, t, d }) => (
           <div key={t} className="group relative rounded-sm border border-border bg-card p-8 transition duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-elegant">
