@@ -3,10 +3,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/book/")({
   head: () => ({
     meta: [
-      { title: "ערך מוסף — כשערכים ועסקים נפגשים בהצלחה | אופיר לוי" },
-      { name: "description", content: "ספר השראה והדרכה ליזמים, לעצמאים ולבעלי עסקים. מאת אופיר לוי — רואה חשבון ויועץ עסקי." },
-      { property: "og:title", content: "ערך מוסף — כשערכים ועסקים נפגשים בהצלחה | אופיר לוי" },
-      { property: "og:description", content: "ספר השראה והדרכה ליזמים, לעצמאים ולבעלי עסקים. מאת אופיר לוי — רואה חשבון ויועץ עסקי." },
+      { title: "ערך מוסף - כשערכים ועסקים נפגשים בהצלחה | אופיר לוי" },
+      { name: "description", content: "ספר השראה והדרכה ליזמים, לעצמאים ולבעלי עסקים. מאת אופיר לוי - רואה חשבון ויועץ עסקי." },
+      { property: "og:title", content: "ערך מוסף - כשערכים ועסקים נפגשים בהצלחה | אופיר לוי" },
+      { property: "og:description", content: "ספר השראה והדרכה ליזמים, לעצמאים ולבעלי עסקים. מאת אופיר לוי - רואה חשבון ויועץ עסקי." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -30,7 +30,7 @@ function Home() {
               כשערכים ועסקים נפגשים בהצלחה. ספר השראה והדרכה ליזמים, לעצמאים ולבעלי עסקים.
             </p>
             <p className="mt-3 text-lg">
-              מאת <span className="font-semibold">אופיר לוי</span> — רואה חשבון ויועץ עסקי
+              מאת <span className="font-semibold">אופיר לוי</span> - רואה חשבון ויועץ עסקי
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link to="/book/preface" className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90">
@@ -75,7 +75,7 @@ function Home() {
       <section className="mx-auto max-w-6xl px-5 py-20">
         <h2 className="font-serif text-3xl font-bold sm:text-4xl">על הספר</h2>
         <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
-          הספר מציג שתי תפיסות שנפגשות: בחלקו הראשון — גישה רעיונית ופרקטית לבניית מערכות יחסים טובות בסביבה העסקית. בחלקו השני — כלים מקצועיים, פיננסיים ותפעוליים, לניהול שוטף של עסק.
+          הספר מציג שתי תפיסות שנפגשות: בחלקו הראשון - גישה רעיונית ופרקטית לבניית מערכות יחסים טובות בסביבה העסקית. בחלקו השני - כלים מקצועיים, פיננסיים ותפעוליים, לניהול שוטף של עסק.
         </p>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">

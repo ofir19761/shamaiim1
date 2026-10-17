@@ -18,7 +18,7 @@ export function Hero() {
           להסתכל על העסק <span className="text-gold">מגבוה</span>.
         </h1>
         <p className="mt-6 max-w-2xl text-xl leading-relaxed text-pearl/80">
-          ליווי אסטרטגי ופיננסי לבעלי עסקים ויזמים, מתוך ניסיון של למעלה מ־20 שנה בהנהלת כספים בחברות המובילות במשק. כדי שתנהלו עסק קטן — כמו עסק גדול.
+          ליווי אסטרטגי ופיננסי לבעלי עסקים ויזמים, מתוך ניסיון של למעלה מ־20 שנה בהנהלת כספים בחברות המובילות במשק. כדי שתנהלו עסק קטן - כמו עסק גדול.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <Link to="/contact" className="rounded-sm bg-gold px-8 py-4 font-bold text-navy shadow-elegant transition hover:brightness-110">בוא נדבר</Link>
@@ -33,7 +33,7 @@ export function Hero() {
 
 const services = [
   { icon: Compass, t: "פיתוח עסקי ואסטרטגיה", d: "בניית תוכנית עסקית, זיהוי מנועי צמיחה, כניסה לשווקים חדשים ושותפויות אסטרטגיות." },
-  { icon: LineChart, t: "ליווי וניהול פיננסי", d: "תזרים מזומנים, תקציב, תמחור, בקרה ודוחות ניהוליים — שקט פיננסי והחלטות מבוססות נתונים." },
+  { icon: LineChart, t: "ליווי וניהול פיננסי", d: "תזרים מזומנים, תקציב, תמחור, בקרה ודוחות ניהוליים - שקט פיננסי והחלטות מבוססות נתונים." },
   { icon: Rocket, t: "הכוונה וליווי ליזמים", d: "מהרעיון ועד ההשקה: בדיקת היתכנות, מודל עסקי, גיוס מימון וצעדים ראשונים בטוחים." },
   { icon: Feather, t: "תוכן ויצירת ערך", d: "הרצאות, סדנאות ותוכן מקצועי שמעניק לבעלי עסקים כלים מעשיים לצמיחה." },
 ];
@@ -78,7 +78,7 @@ export function About() {
           <Eyebrow>אודות</Eyebrow>
           <h2 className="mb-6 text-4xl font-bold md:text-5xl">אופיר לוי</h2>
           <p className="mb-4 text-lg leading-relaxed text-muted-foreground">
-            יועץ עסקי ופיננסי עם ניסיון של מעל 20 שנה בייעוץ עסקי ובניהול כספים בכיר בחברות מובילות. אופיר מביא לכל עסק את ארגז הכלים של ארגונים גדולים — בהתאמה אישית לגודל, לקצב ולאופי של העסק.
+            יועץ עסקי ופיננסי עם ניסיון של מעל 20 שנה בייעוץ עסקי ובניהול כספים בכיר בחברות מובילות. אופיר מביא לכל עסק את ארגז הכלים של ארגונים גדולים - בהתאמה אישית לגודל, לקצב ולאופי של העסק.
           </p>
           <p className="mb-10 text-lg leading-relaxed text-muted-foreground">
             הגישה שלו פשוטה: להכיר את העסק לעומק, לראות את התמונה המלאה, ולהיות שם בכל שלב.
@@ -123,12 +123,12 @@ export function BookShowcase() {
         <BookCover />
         <div>
           <Eyebrow>הספר</Eyebrow>
-          <h2 className="mb-6 text-4xl font-bold md:text-5xl">ערך מוסף — {BOOK_SUBTITLE}</h2>
+          <h2 className="mb-6 text-4xl font-bold md:text-5xl">ערך מוסף - {BOOK_SUBTITLE}</h2>
           <blockquote className="mb-6 border-s-2 border-gold ps-5 font-serif text-2xl text-gold-soft">
             ״עסק טוב, בטווח הארוך, נבנה על יחסי גומלין טובים בין העסק לבין העובדים, הלקוחות, הספקים והקהילה.״
           </blockquote>
           <p className="mb-10 text-lg leading-relaxed text-pearl/75">
-            ספר השראה והדרכה ליזמים, לעצמאים ולבעלי עסקים. חלק א׳ — ערכים ואידיאולוגיה: ככה בונים עסק. חלק ב׳ — מהלכה למעשה: הקמה וניהול פיננסי. הספר המלא זמין לקריאה כאן, באתר.
+            ספר השראה והדרכה ליזמים, לעצמאים ולבעלי עסקים. חלק א׳ - ערכים ואידיאולוגיה: ככה בונים עסק. חלק ב׳ - מהלכה למעשה: הקמה וניהול פיננסי. הספר המלא זמין לקריאה כאן, באתר.
           </p>
           <Link to="/book" className="inline-flex items-center gap-2 rounded-sm bg-gold px-8 py-4 font-bold text-navy transition hover:brightness-110">
             למתחם הספר <ArrowLeft className="h-5 w-5" />
@@ -148,7 +148,7 @@ export function Testimonial() {
       </p>
       <div className="mx-auto mt-8 h-px w-16 bg-gold" />
       <p className="mt-6 font-bold">יגל שמעיה</p>
-      <p className="text-muted-foreground">מייסד ומנכ״ל גולד פארם — מוצרים לגיל השלישי</p>
+      <p className="text-muted-foreground">מייסד ומנכ״ל גולד פארם - מוצרים לגיל השלישי</p>
     </section>
   );
 }

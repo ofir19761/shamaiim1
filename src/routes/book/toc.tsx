@@ -3,9 +3,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/book/toc")({
   head: () => ({
     meta: [
-      { title: "תוכן העניינים — ערך מוסף" },
+      { title: "תוכן העניינים - ערך מוסף" },
       { name: "description", content: "תוכן העניינים של הספר ערך מוסף מאת אופיר לוי." },
-      { property: "og:title", content: "תוכן העניינים — ערך מוסף" },
+      { property: "og:title", content: "תוכן העניינים - ערך מוסף" },
       { property: "og:description", content: "תוכן העניינים של הספר ערך מוסף מאת אופיר לוי." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -17,14 +17,14 @@ export const Route = createFileRoute("/book/toc")({
 const SECTIONS: { part?: string; title: string; to: string; page: number; sub?: { label: string; hash: string; page: number }[] }[] = [
   { title: "פתח דבר", to: "/book/preface", page: 9 },
 
-  { part: "חלק א׳ — ערכים ואידיאולוגיה: ככה בונים עסק", title: "פרק ראשון: מתחילים בערכים", to: "/book/chapter-1", page: 13, sub: [
-    { label: "עולם העסקים החדש — מה זה?", hash: "new-world", page: 13 },
+  { part: "חלק א׳ - ערכים ואידיאולוגיה: ככה בונים עסק", title: "פרק ראשון: מתחילים בערכים", to: "/book/chapter-1", page: 13, sub: [
+    { label: "עולם העסקים החדש - מה זה?", hash: "new-world", page: 13 },
     { label: "אידיאולוגיה ב־150 מילים", hash: "ideology", page: 15 },
     { label: "הערכים שמגדירים את העסק", hash: "values", page: 16 },
     { label: "חדשנות בעסקים", hash: "innovation", page: 20 },
   ]},
   { title: "פרק שני: הסביבה העסקית שלכם", to: "/book/chapter-2", page: 23, sub: [
-    { label: "א. עובדים — תתחברו אליהם, תשמרו עליהם", hash: "employees", page: 24 },
+    { label: "א. עובדים - תתחברו אליהם, תשמרו עליהם", hash: "employees", page: 24 },
     { label: "הנעת עובדים ומוטיבציה", hash: "motivation", page: 29 },
     { label: "כוח הקשבה עוזר לאנשים להשתנות", hash: "listening", page: 31 },
     { label: "ב. לקוחות וספקים", hash: "customers", page: 37 },
@@ -32,18 +32,18 @@ const SECTIONS: { part?: string; title: string; to: string; page: number; sub?: 
     { label: "בונים את הקשר", hash: "connection", page: 46 },
   ]},
 
-  { part: "חלק ב׳ — מהלכה למעשה", title: "פרק שלישי: מוכנים להקים עסק?", to: "/book/chapter-3", page: 55, sub: [
+  { part: "חלק ב׳ - מהלכה למעשה", title: "פרק שלישי: מוכנים להקים עסק?", to: "/book/chapter-3", page: 55, sub: [
     { label: "אילו תכונות דרושות לבעל עסק?", hash: "traits", page: 55 },
     { label: "ממחשבות להקמה", hash: "from-thoughts", page: 57 },
     { label: "כמה זמן לוקח להקים עסק?", hash: "time", page: 61 },
     { label: "איך עושים ׳דיפנס׳ בעסק?", hash: "defense", page: 67 },
-    { label: "יוצאים לנופש — לפני שאורזים", hash: "vacation", page: 69 },
+    { label: "יוצאים לנופש - לפני שאורזים", hash: "vacation", page: 69 },
   ]},
   { title: "פרק רביעי: ניהול פיננסי", to: "/book/chapter-4", page: 71, sub: [
     { label: "איזו רוח נושבת מכיוון רואה החשבון שלכם?", hash: "accountant", page: 71 },
     { label: "איך עוברים את ה־15 לחודש?", hash: "15th", page: 72 },
     { label: "איפה הכסף? באמת איפה…", hash: "money", page: 75 },
-    { label: "חודש דצמבר — חודש הרחמים והסליחות", hash: "december", page: 81 },
+    { label: "חודש דצמבר - חודש הרחמים והסליחות", hash: "december", page: 81 },
     { label: "טיפים פיננסיים לניהול עסק", hash: "tips", page: 88 },
     { label: "הכול מתחיל ביחסים בינינו", hash: "relations", page: 94 },
   ]},

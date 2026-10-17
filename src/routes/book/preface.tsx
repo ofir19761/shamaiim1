@@ -4,9 +4,9 @@ import { ChapterPage } from "@/components/book/BookLayout";
 export const Route = createFileRoute("/book/preface")({
   head: () => ({
     meta: [
-      { title: "פתח דבר — ערך מוסף" },
+      { title: "פתח דבר - ערך מוסף" },
       { name: "description", content: "פתח דבר של הספר ערך מוסף מאת אופיר לוי." },
-      { property: "og:title", content: "פתח דבר — ערך מוסף" },
+      { property: "og:title", content: "פתח דבר - ערך מוסף" },
       { property: "og:description", content: "פתח דבר של הספר ערך מוסף מאת אופיר לוי." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -22,12 +22,12 @@ function Preface() {
       title="פתח דבר"
       pageNumber={9}
       prev={{ to: "/book/toc", label: "תוכן העניינים" }}
-      next={{ to: "/book/chapter-1", label: "פרק ראשון — מתחילים בערכים" }}
+      next={{ to: "/book/chapter-1", label: "פרק ראשון - מתחילים בערכים" }}
     >
       <p>
-        הספר ״ערך מוסף״ נכתב במטרה לסייע לכם — יזמים, עצמאים ובעלי עסקים — במשימות
+        הספר ״ערך מוסף״ נכתב במטרה לסייע לכם - יזמים, עצמאים ובעלי עסקים - במשימות
         המורכבות של ייזום העסק, הקמתו וניהולו. ניהול עסק מבוסס על ניהול מערכות
-        היחסים עם האנשים שמרכיבים את הסביבה העסקית: עובדים, לקוחות, ספקים וקהילה —
+        היחסים עם האנשים שמרכיבים את הסביבה העסקית: עובדים, לקוחות, ספקים וקהילה -
         כשלכל אחד מהם השפעה רבה על הצלחת העסק.
       </p>
       <p>

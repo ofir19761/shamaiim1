@@ -3,10 +3,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/book/resume")({
   head: () => ({
     meta: [
-      { title: "הרזומה שלי בקצרה — אופיר לוי" },
-      { name: "description", content: "אופיר לוי — רואה חשבון ויועץ עסקי בעל ניסיון של יותר מ־15 שנה במגזר העסקי." },
-      { property: "og:title", content: "הרזומה שלי בקצרה — אופיר לוי" },
-      { property: "og:description", content: "אופיר לוי — רואה חשבון ויועץ עסקי בעל ניסיון של יותר מ־15 שנה במגזר העסקי." },
+      { title: "הרזומה שלי בקצרה - אופיר לוי" },
+      { name: "description", content: "אופיר לוי - רואה חשבון ויועץ עסקי בעל ניסיון של יותר מ־15 שנה במגזר העסקי." },
+      { property: "og:title", content: "הרזומה שלי בקצרה - אופיר לוי" },
+      { property: "og:description", content: "אופיר לוי - רואה חשבון ויועץ עסקי בעל ניסיון של יותר מ־15 שנה במגזר העסקי." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -52,7 +52,7 @@ function Resume() {
             <strong> SACK'S</strong>.
           </p>
           <p>
-            בשנים האחרונות, אני מייעץ לעסקים באמצעות <strong>״שמים — מימוש שאיפות
+            בשנים האחרונות, אני מייעץ לעסקים באמצעות <strong>״שמים - מימוש שאיפות
             עסקיות״</strong>.
           </p>
           <p className="text-sm text-muted-foreground">
@@ -67,7 +67,7 @@ function Resume() {
       <nav className="mt-16 flex flex-col-reverse gap-3 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
         <Link to="/book/chapter-4" className="inline-flex items-center gap-2 rounded-md border border-border bg-paper px-4 py-3 text-sm hover:border-gold hover:bg-gold-soft">
           <span aria-hidden>→</span>
-          <span><span className="block text-xs text-muted-foreground">הקודם</span><span className="font-semibold">פרק רביעי — ניהול פיננסי</span></span>
+          <span><span className="block text-xs text-muted-foreground">הקודם</span><span className="font-semibold">פרק רביעי - ניהול פיננסי</span></span>
         </Link>
         <Link to="/" className="inline-flex items-center gap-2 rounded-md border border-border bg-paper px-4 py-3 text-sm hover:border-gold hover:bg-gold-soft">
           <span><span className="block text-xs text-muted-foreground">חזרה</span><span className="font-semibold">לעמוד הראשי</span></span>

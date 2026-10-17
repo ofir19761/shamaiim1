@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "שמיים — ייעוץ עסקי ופיננסי | אופיר לוי" },
+      { title: "שמיים - ייעוץ עסקי ופיננסי | אופיר לוי" },
       { name: "description", content: "ייעוץ עסקי, פיתוח עסקי וליווי פיננסי בהובלת אופיר לוי." },
       { name: "author", content: "אופיר לוי" },
       { property: "og:type", content: "website" },
