@@ -82,7 +82,7 @@ export function About() {
           <p className="mb-10 text-lg leading-relaxed text-muted-foreground">
             הגישה שלו פשוטה: להכיר את העסק לעומק, לראות את התמונה המלאה, ולהיות שם בכל שלב.
           </p>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 text-center sm:grid-cols-3">
             {stations.map((s) => (
               <div key={s.n} className="border-t-2 border-gold bg-card p-5">
                 <p className="font-serif text-lg font-bold" dir="auto">{s.n}</p>
