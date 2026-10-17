@@ -18,12 +18,11 @@ export function Hero() {
     <section className="relative overflow-hidden bg-sky text-pearl">
       <div className="pointer-events-none absolute -top-40 left-0 h-[500px] w-[500px] rounded-full bg-gold/10 blur-3xl" />
       <div className="relative mx-auto max-w-7xl px-6 py-28 md:py-40">
-        <Eyebrow>שמיים · ייעוץ עסקי, פיתוח עסקי ופיננסי</Eyebrow>
         <h1 className="max-w-3xl text-5xl font-bold leading-tight md:text-7xl">
           להסתכל על העסק <span className="text-gold">מגבוה</span>.
         </h1>
         <p className="mt-6 max-w-2xl text-xl leading-relaxed text-pearl/80">
-          ליווי אסטרטגי ופיננסי לבעלי עסקים ויזמים, מתוך ניסיון של למעלה מ־20 שנה בניהול כספים בחברות המובילות במשק. כדי שתנהלו עסק קטן - כמו עסק גדול.
+          חיבור בין ראייה אסטרטגית רחבה לשליטה פיננסית מדויקת. ליווי אסטרטגי ומעשי מתוך ניסיון של מעל 20 שנה בניהול כספים בחברות המובילות במשק - כדי שתנהלו עסק קטן כמו עסק גדול.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <Link to="/contact" className="rounded-sm bg-gold px-8 py-4 font-bold text-navy shadow-elegant transition hover:brightness-110">בוא נדבר</Link>
