@@ -47,6 +47,11 @@ function Resume() {
             </a>
           </p>
         </div>
+        <div className="order-1 sm:order-2">
+          <Portrait compact alt="אופיר לוי - מחבר הספר ערך מוסף" />
+          <p className="mt-3 text-center font-serif text-lg font-bold">אופיר לוי</p>
+          <p className="text-center text-sm text-muted-foreground">רואה חשבון ויועץ עסקי</p>
+        </div>
       </div>
 
       <nav className="mt-16 flex flex-col-reverse gap-3 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
