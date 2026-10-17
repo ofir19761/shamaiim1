@@ -13,3 +13,5 @@
 - Use the un-nested `articles_.$slug.tsx` route for full article pages because the existing `/articles` page is a content leaf, not a layout.
 - Reference uploaded portraits through Lovable Assets pointers so media stays off the source repository.
 - Share portrait rendering between About and the book resume through a single component with a compact variant so framing remains consistent across both contexts.
+
+- Static hosting: vite.config.ts prerenders every route (incl. one page per article slug) with nitro disabled; GitHub Pages publishes dist/client. Why: GitHub Pages serves only static files.
