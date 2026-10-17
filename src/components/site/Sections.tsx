@@ -71,8 +71,7 @@ const stations = [
 export function About() {
   return (
     <section className="bg-muted">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-[280px_minmax(0,1fr)] md:gap-12 lg:gap-16">
-        <Portrait alt="אופיר לוי - יועץ עסקי ופיננסי" />
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-[minmax(0,1fr)_280px] md:gap-12 lg:gap-16">
         <div>
           <Eyebrow>אודות</Eyebrow>
           <h2 className="mb-6 text-4xl font-bold md:text-5xl">אופיר לוי</h2>
