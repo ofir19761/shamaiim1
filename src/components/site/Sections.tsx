@@ -244,7 +244,7 @@ export function ContactForm() {
             <label className="block">
               <span className="mb-2 block text-sm font-semibold">הודעה</span>
               <textarea name="message" rows={5} className={field} />
-              {errors.message && <span className="mt-1 block text-sm text-destructive">{errors.message}</span>}
+              {errors['message'] && <span className="mt-1 block text-sm text-destructive">{errors['message']}</span>}
             </label>
             <button className="w-full rounded-sm bg-navy py-4 font-bold text-pearl transition hover:bg-slate">שליחה</button>
           </form>
