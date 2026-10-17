@@ -71,8 +71,7 @@ const stations = [
 export function About() {
   return (
     <section className="bg-muted">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-[280px_minmax(0,1fr)] md:gap-12 lg:gap-16">
-        <Portrait alt="אופיר לוי - יועץ עסקי ופיננסי" />
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-[minmax(0,1fr)_280px] md:gap-12 lg:gap-16">
         <div>
           <Eyebrow>אודות</Eyebrow>
           <h2 className="mb-6 text-4xl font-bold md:text-5xl">אופיר לוי</h2>
@@ -82,7 +81,7 @@ export function About() {
           <p className="mb-10 text-lg leading-relaxed text-muted-foreground">
             הגישה שלו פשוטה: להכיר את העסק לעומק, לראות את התמונה המלאה, ולהיות שם בכל שלב.
           </p>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 text-center sm:grid-cols-3">
             {stations.map((s) => (
               <div key={s.n} className="border-t-2 border-gold bg-card p-5">
                 <p className="font-serif text-lg font-bold" dir="auto">{s.n}</p>
@@ -91,6 +90,7 @@ export function About() {
             ))}
           </div>
         </div>
+        <Portrait alt="אופיר לוי - יועץ עסקי ופיננסי" />
       </div>
     </section>
   );

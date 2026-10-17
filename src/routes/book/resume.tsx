@@ -23,14 +23,8 @@ function Resume() {
         <h1 className="mt-2 font-serif text-4xl font-bold sm:text-5xl">הרזומה שלי בקצרה</h1>
       </header>
 
-      <div className="grid items-start gap-8 sm:grid-cols-[184px_minmax(0,1fr)] sm:gap-10">
-        <div>
-          <Portrait compact alt="אופיר לוי - מחבר הספר ערך מוסף" />
-          <p className="mt-3 text-center font-serif text-lg font-bold">אופיר לוי</p>
-          <p className="text-center text-sm text-muted-foreground">רואה חשבון ויועץ עסקי</p>
-        </div>
-
-        <div className="prose-book">
+      <div className="grid items-start gap-8 sm:grid-cols-[minmax(0,1fr)_184px] sm:gap-10">
+        <div className="prose-book order-2 sm:order-1">
           <p>
             רואה חשבון ויועץ עסקי בעל ניסיון של יותר מ־15 שנה במגזר העסקי. התחלתי
             את הקריירה המקצועית שלי בארנסט אנד יאנג (משרד רואי החשבון הגדול
@@ -52,6 +46,11 @@ function Resume() {
               shamaiim.co.il/blog/resume
             </a>
           </p>
+        </div>
+        <div className="order-1 sm:order-2">
+          <Portrait compact alt="אופיר לוי - מחבר הספר ערך מוסף" />
+          <p className="mt-3 text-center font-serif text-lg font-bold">אופיר לוי</p>
+          <p className="text-center text-sm text-muted-foreground">רואה חשבון ויועץ עסקי</p>
         </div>
       </div>
 
