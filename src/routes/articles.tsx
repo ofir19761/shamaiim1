@@ -1,4 +1,4 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, useNavigate, type SearchSchemaInput } from "@tanstack/react-router";
 import { Search, X, BookOpen } from "lucide-react";
 import { SiteShell, meta } from "@/components/site/Layout";
 import { ArticleCard } from "@/components/site/ArticleCard";
@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { articles, categories, filterArticles } from "@/content/articles";
 
 export const Route = createFileRoute("/articles")({
-  validateSearch: (search: Record<string, unknown>) => ({
+  validateSearch: (search: SearchSchemaInput & { q?: unknown; category?: unknown }) => ({
     q: typeof search.q === "string" ? search.q : "",
     category: typeof search.category === "string" ? search.category : "",
   }),
