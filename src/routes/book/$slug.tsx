@@ -28,7 +28,7 @@ export const Route = createFileRoute("/book/$slug")({
 function ChapterPage() {
   const { slug } = Route.useLoaderData();
   const i = chapters.findIndex((c) => c.slug === slug);
-  const c = chapters[i];
+  const c = chapters[i]!;
   const prev = chapters[i - 1];
   const next = chapters[i + 1];
   return (
