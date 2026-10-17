@@ -7,6 +7,7 @@ import { Portrait } from "@/components/site/Portrait";
 import { articles } from "@/content/articles";
 import { ArticleCard } from "@/components/site/ArticleCard";
 import { Button } from "@/components/ui/button";
+import book3d from "@/assets/book-3d.png.asset.json";
 
 function Eyebrow({ children }: { children: string }) {
   return <p className="mb-3 text-sm font-bold tracking-[0.2em] text-gold">{children}</p>;
@@ -63,9 +64,10 @@ export function Services() {
 }
 
 const stations = [
-  { n: "Lee Cooper Jeans", r: "ניהול כספים בכיר" },
-  { n: "ארומה תל אביב", r: "ניהול כספים בכיר" },
-  { n: "Sack's", r: "ניהול כספים בכיר" },
+  { n: "EY", r: "משרד רואי החשבון הגדול בישראל" },
+  { n: "Lee Cooper Jeans", r: "חשב ומנהל כספים" },
+  { n: "Aroma Tel Aviv", r: "חשב ומנהל כספים" },
+  { n: "SACK'S", r: "חשב ומנהל כספים" },
 ];
 
 export function About() {
@@ -81,7 +83,7 @@ export function About() {
           <p className="mb-10 text-lg leading-relaxed text-muted-foreground">
             הגישה שלו פשוטה: להכיר את העסק לעומק, לראות את התמונה המלאה, ולהיות שם בכל שלב.
           </p>
-          <div className="grid gap-4 text-center sm:grid-cols-3">
+          <div className="grid gap-4 text-center sm:grid-cols-2 lg:grid-cols-4">
             {stations.map((s) => (
               <div key={s.n} className="border-t-2 border-gold bg-card p-5">
                 <p className="font-serif text-lg font-bold" dir="auto">{s.n}</p>
@@ -96,22 +98,16 @@ export function About() {
   );
 }
 
-export function BookCover() {
+export function BookCover({ className = "" }: { className?: string }) {
   return (
-    <div className="mx-auto [perspective:1600px]">
-      <div className="relative h-[420px] w-[290px] transition duration-700 [transform-style:preserve-3d] [transform:rotateY(22deg)] hover:[transform:rotateY(8deg)]">
-        <div className="absolute inset-y-0 -left-[28px] w-[28px] origin-right bg-slate [transform:rotateY(-90deg)]" />
-        <div className="absolute inset-0 flex flex-col justify-between bg-sky p-8 text-pearl shadow-elegant">
-          <div className="h-px w-full bg-gold-grad" />
-          <div>
-            <p className="mb-2 text-xs tracking-[0.3em] text-gold">אופיר לוי</p>
-            <h3 className="text-5xl font-black text-gold">{BOOK_TITLE}</h3>
-            <p className="mt-4 text-sm text-pearl/80">{BOOK_SUBTITLE}</p>
-          </div>
-          <div className="h-px w-full bg-gold-grad" />
-        </div>
-      </div>
-    </div>
+    <img
+      src={book3d.url}
+      alt={`הספר ${BOOK_TITLE} - ${BOOK_SUBTITLE}, מאת אופיר לוי`}
+      width={596}
+      height={776}
+      loading="lazy"
+      className={`mx-auto h-auto w-full max-w-[320px] drop-shadow-2xl transition duration-500 hover:-translate-y-1 ${className}`}
+    />
   );
 }
 
