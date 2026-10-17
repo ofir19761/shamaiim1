@@ -64,9 +64,9 @@ export function Services() {
 
 const stations = [
   { n: "EY", r: "משרד רואי החשבון הגדול בישראל" },
-  { n: "Lee Cooper Jeans", r: "חשב ומנהל כספים" },
-  { n: "Aroma Tel Aviv", r: "חשב ומנהל כספים" },
-  { n: "SACK'S", r: "חשב ומנהל כספים" },
+  { n: "Lee Cooper Jeans", r: "ניהול כספים" },
+  { n: "Aroma Tel Aviv", r: "ניהול כספים" },
+  { n: "SACK'S", r: "ניהול כספים" },
 ];
 
 export function About() {
