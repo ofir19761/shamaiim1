@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
+import { WhatsAppFloat, WhatsAppIcon, WHATSAPP_URL } from "./WhatsApp";
 
 const nav = [
   { to: "/services", label: "שירותים" },
@@ -71,6 +72,7 @@ export function Footer() {
           <h4 className="mb-4 text-lg text-gold">יצירת קשר</h4>
           <ul className="space-y-3 text-pearl/80">
             <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-gold" /><a href="tel:0545606843" dir="ltr">054-5606843</a></li>
+            <li className="flex items-center gap-3"><WhatsAppIcon className="h-4 w-4 text-gold" /><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-gold">הודעה ב-WhatsApp</a></li>
             <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-gold" /><a href="mailto:Ofir@shamaiim.co.il">Ofir@shamaiim.co.il</a></li>
             <li className="flex items-center gap-3"><MapPin className="h-4 w-4 text-gold" />הבטחון 6, פתח תקווה</li>
           </ul>
@@ -87,6 +89,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <Header />
       <main>{children}</main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 }
