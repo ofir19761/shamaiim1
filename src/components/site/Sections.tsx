@@ -23,7 +23,7 @@ export function Hero() {
           להסתכל על העסק <span className="text-gold">מגבוה</span>.
         </h1>
         <p className="mt-6 max-w-2xl text-xl leading-relaxed text-pearl/80">
-          ליווי אסטרטגי ופיננסי לבעלי עסקים ויזמים, מתוך ניסיון של למעלה מ־20 שנה בהנהלת כספים בחברות המובילות במשק. כדי שתנהלו עסק קטן - כמו עסק גדול.
+          ליווי אסטרטגי ופיננסי לבעלי עסקים ויזמים, מתוך ניסיון של למעלה מ־20 שנה בניהול כספים בחברות המובילות במשק. כדי שתנהלו עסק קטן - כמו עסק גדול.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <Link to="/contact" className="rounded-sm bg-gold px-8 py-4 font-bold text-navy shadow-elegant transition hover:brightness-110">בוא נדבר</Link>
