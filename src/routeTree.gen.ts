@@ -10,33 +10,148 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ArticlesRouteImport } from './routes/articles'
+import { Route as BookRouteImport } from './routes/book'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as BookIndexRouteImport } from './routes/book/index'
+import { Route as BookSlugRouteImport } from './routes/book/$slug'
+import { Route as BookResumeRouteImport } from './routes/book/resume'
+import { Route as BookTocRouteImport } from './routes/book/toc'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArticlesRoute = ArticlesRouteImport.update({
+  id: '/articles',
+  path: '/articles',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookRoute = BookRouteImport.update({
+  id: '/book',
+  path: '/book',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookIndexRoute = BookIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BookRoute,
+} as any)
+const BookSlugRoute = BookSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BookRoute,
+} as any)
+const BookResumeRoute = BookResumeRouteImport.update({
+  id: '/resume',
+  path: '/resume',
+  getParentRoute: () => BookRoute,
+} as any)
+const BookTocRoute = BookTocRouteImport.update({
+  id: '/toc',
+  path: '/toc',
+  getParentRoute: () => BookRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/articles': typeof ArticlesRoute
+  '/book': typeof BookRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/services': typeof ServicesRoute
+  '/book/$slug': typeof BookSlugRoute
+  '/book/resume': typeof BookResumeRoute
+  '/book/toc': typeof BookTocRoute
+  '/book/': typeof BookIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/articles': typeof ArticlesRoute
+  '/contact': typeof ContactRoute
+  '/services': typeof ServicesRoute
+  '/book/$slug': typeof BookSlugRoute
+  '/book/resume': typeof BookResumeRoute
+  '/book/toc': typeof BookTocRoute
+  '/book': typeof BookIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/articles': typeof ArticlesRoute
+  '/book': typeof BookRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/services': typeof ServicesRoute
+  '/book/$slug': typeof BookSlugRoute
+  '/book/resume': typeof BookResumeRoute
+  '/book/toc': typeof BookTocRoute
+  '/book/': typeof BookIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/articles'
+    | '/book'
+    | '/contact'
+    | '/services'
+    | '/book/$slug'
+    | '/book/resume'
+    | '/book/toc'
+    | '/book/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/articles'
+    | '/contact'
+    | '/services'
+    | '/book/$slug'
+    | '/book/resume'
+    | '/book/toc'
+    | '/book'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/articles'
+    | '/book'
+    | '/contact'
+    | '/services'
+    | '/book/$slug'
+    | '/book/resume'
+    | '/book/toc'
+    | '/book/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ArticlesRoute: typeof ArticlesRoute
+  BookRoute: typeof BookRouteWithChildren
+  ContactRoute: typeof ContactRoute
+  ServicesRoute: typeof ServicesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +163,95 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/articles': {
+      id: '/articles'
+      path: '/articles'
+      fullPath: '/articles'
+      preLoaderRoute: typeof ArticlesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book': {
+      id: '/book'
+      path: '/book'
+      fullPath: '/book'
+      preLoaderRoute: typeof BookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book/': {
+      id: '/book/'
+      path: '/'
+      fullPath: '/book/'
+      preLoaderRoute: typeof BookIndexRouteImport
+      parentRoute: typeof BookRoute
+    }
+    '/book/$slug': {
+      id: '/book/$slug'
+      path: '/$slug'
+      fullPath: '/book/$slug'
+      preLoaderRoute: typeof BookSlugRouteImport
+      parentRoute: typeof BookRoute
+    }
+    '/book/resume': {
+      id: '/book/resume'
+      path: '/resume'
+      fullPath: '/book/resume'
+      preLoaderRoute: typeof BookResumeRouteImport
+      parentRoute: typeof BookRoute
+    }
+    '/book/toc': {
+      id: '/book/toc'
+      path: '/toc'
+      fullPath: '/book/toc'
+      preLoaderRoute: typeof BookTocRouteImport
+      parentRoute: typeof BookRoute
+    }
   }
 }
 
+interface BookRouteChildren {
+  BookSlugRoute: typeof BookSlugRoute
+  BookResumeRoute: typeof BookResumeRoute
+  BookTocRoute: typeof BookTocRoute
+  BookIndexRoute: typeof BookIndexRoute
+}
+
+const BookRouteChildren: BookRouteChildren = {
+  BookSlugRoute: BookSlugRoute,
+  BookResumeRoute: BookResumeRoute,
+  BookTocRoute: BookTocRoute,
+  BookIndexRoute: BookIndexRoute,
+}
+
+const BookRouteWithChildren = BookRoute._addFileChildren(BookRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ArticlesRoute: ArticlesRoute,
+  BookRoute: BookRouteWithChildren,
+  ContactRoute: ContactRoute,
+  ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
