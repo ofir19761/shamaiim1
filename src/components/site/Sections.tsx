@@ -63,7 +63,7 @@ export function Services() {
 }
 
 const stations = [
-  { n: "EY", r: "משרד רואי החשבון הגדול בישראל" },
+  { n: "EY", r: "ראיית חשבון וביקורת" },
   { n: "Lee Cooper Jeans", r: "ניהול כספים" },
   { n: "Aroma Tel Aviv", r: "ניהול כספים" },
   { n: "SACK'S", r: "ניהול כספים" },
@@ -84,9 +84,9 @@ export function About() {
           </p>
           <div className="grid gap-4 text-center sm:grid-cols-2 lg:grid-cols-4">
             {stations.map((s) => (
-              <div key={s.n} className="border-t-2 border-gold bg-card p-5">
-                <p className="font-serif text-lg font-bold" dir="auto">{s.n}</p>
-                <p className="text-sm text-muted-foreground">{s.r}</p>
+              <div key={s.n} className="border-t-2 border-gold bg-card px-3 py-5">
+                <p className="whitespace-nowrap font-serif text-base font-bold lg:text-lg" dir="auto">{s.n}</p>
+                <p className="whitespace-nowrap text-sm text-muted-foreground">{s.r}</p>
               </div>
             ))}
           </div>
