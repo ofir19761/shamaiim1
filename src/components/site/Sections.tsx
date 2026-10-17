@@ -125,10 +125,10 @@ export function BookShowcase() {
           <Eyebrow>הספר</Eyebrow>
           <h2 className="mb-6 text-4xl font-bold md:text-5xl">ערך מוסף — {BOOK_SUBTITLE}</h2>
           <blockquote className="mb-6 border-s-2 border-gold ps-5 font-serif text-2xl text-gold-soft">
-            ״ערך מוסף אינו מה שאתה מוכר. הוא מה שהלקוח לוקח איתו הביתה.״
+            ״עסק טוב, בטווח הארוך, נבנה על יחסי גומלין טובים בין העסק לבין העובדים, הלקוחות, הספקים והקהילה.״
           </blockquote>
           <p className="mb-10 text-lg leading-relaxed text-pearl/75">
-            ארבעה פרקים מעשיים על מערכות יחסים עסקיות, מכירה, משא ומתן ושימור לקוחות — מזוקקים מתוך שני עשורים בחדרי הנהלה ולצד בעלי עסקים. הספר המלא זמין לקריאה כאן, באתר.
+            ספר השראה והדרכה ליזמים, לעצמאים ולבעלי עסקים. חלק א׳ — ערכים ואידיאולוגיה: ככה בונים עסק. חלק ב׳ — מהלכה למעשה: הקמה וניהול פיננסי. הספר המלא זמין לקריאה כאן, באתר.
           </p>
           <Link to="/book" className="inline-flex items-center gap-2 rounded-sm bg-gold px-8 py-4 font-bold text-navy transition hover:brightness-110">
             למתחם הספר <ArrowLeft className="h-5 w-5" />
