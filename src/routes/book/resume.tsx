@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import portrait from "@/assets/ofir-levi-portrait.jpg.asset.json";
 
 export const Route = createFileRoute("/book/resume")({
   head: () => ({
@@ -23,17 +24,9 @@ function Resume() {
       </header>
 
       <div className="grid gap-10 sm:grid-cols-[200px_1fr] sm:gap-12">
-        {/* Photo placeholder */}
         <div>
-          <div className="aspect-[3/4] w-full overflow-hidden rounded-lg border-2 border-dashed border-gold bg-card">
-            <div className="flex h-full w-full flex-col items-center justify-center p-4 text-center">
-              <svg className="mb-3 h-10 w-10 text-muted-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <circle cx="12" cy="8" r="4" />
-                <path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6" />
-              </svg>
-              <p className="text-xs font-semibold text-muted-foreground">מקום לתמונה</p>
-              <p className="mt-1 text-[11px] text-muted-foreground">התמונה תועלה בהמשך</p>
-            </div>
+          <div className="mx-auto aspect-[3/4] w-full max-w-xs overflow-hidden rounded-md border border-gold bg-card">
+            <img src={portrait.url} alt="אופיר לוי - מחבר הספר ערך מוסף" width={768} height={768} className="h-full w-full object-cover object-top" />
           </div>
           <p className="mt-3 text-center font-serif text-lg font-bold">אופיר לוי</p>
           <p className="text-center text-sm text-muted-foreground">רואה חשבון ויועץ עסקי</p>
