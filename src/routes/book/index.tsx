@@ -25,7 +25,7 @@ function Home() {
           <div className="flex flex-col justify-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-gold">המדריך לעולם העסקים החדש</p>
             <h1 className="font-serif text-5xl font-bold leading-[1.05] sm:text-6xl lg:text-7xl">
-              ערך<br />מוסף
+              ערך מוסף
             </h1>
             <p className="mt-6 max-w-xl text-xl text-muted-foreground">
               כשערכים ועסקים נפגשים בהצלחה. ספר השראה והדרכה ליזמים, לעצמאים ולבעלי עסקים.
