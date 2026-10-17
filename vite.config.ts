@@ -25,12 +25,13 @@ const staticPaths = [
 ];
 
 export default defineConfig({
-  nitro: { preset: "github_pages" },
+  // Plain static output for GitHub Pages: Nitro's github_pages preset breaks the TanStack Start SSR build, so nitro is off and TanStack prerenders into dist/client.
+  nitro: false,
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
     pages: staticPaths.map((path) => ({ path })),
-    prerender: { enabled: true, autoStaticPathsDiscovery: false },
+    prerender: { enabled: true, autoStaticPathsDiscovery: false, crawlLinks: false },
   },
 });
