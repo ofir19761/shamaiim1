@@ -63,7 +63,7 @@ export function Services() {
 }
 
 const stations = [
-  { n: "EY", r: "ראיית חשבון וביקורת" },
+  { n: "EY", r: "רו\"ח, מנג'ר" },
   { n: "Lee Cooper Jeans", r: "ניהול כספים" },
   { n: "Aroma Tel Aviv", r: "ניהול כספים" },
   { n: "SACK'S", r: "ניהול כספים" },
