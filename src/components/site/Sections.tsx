@@ -3,6 +3,10 @@ import { useState } from "react";
 import { z } from "zod";
 import { Compass, LineChart, Rocket, Feather, Quote, ArrowLeft, CheckCircle2, BookOpen } from "lucide-react";
 import { BOOK_SUBTITLE, BOOK_TITLE } from "@/content/book";
+import portrait from "@/assets/ofir-levi-portrait.jpg.asset.json";
+import { articles } from "@/content/articles";
+import { ArticleCard } from "@/components/site/ArticleCard";
+import { Button } from "@/components/ui/button";
 
 function Eyebrow({ children }: { children: string }) {
   return <p className="mb-3 text-sm font-bold tracking-[0.2em] text-gold">{children}</p>;
@@ -70,8 +74,8 @@ export function About() {
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 py-24 lg:grid-cols-2">
         <div className="relative mx-auto w-full max-w-sm">
           <div className="absolute -inset-4 translate-x-6 translate-y-6 border border-gold" />
-          <div className="relative flex aspect-[4/5] items-center justify-center bg-sky shadow-elegant">
-            <span className="font-serif text-8xl text-gold">א.ל</span>
+          <div className="relative aspect-[4/5] overflow-hidden bg-muted shadow-elegant">
+            <img src={portrait.url} alt="אופיר לוי - יועץ עסקי ופיננסי" width={768} height={768} loading="lazy" className="h-full w-full object-cover object-top" />
           </div>
         </div>
         <div>
@@ -153,15 +157,6 @@ export function Testimonial() {
   );
 }
 
-const articles = [
-  { t: "תזרים מזומנים: הדופק של העסק", d: "למה עסק רווחי יכול לקרוס, ואיך בונים תחזית תזרים שמונעת הפתעות.", tag: "פיננסים" },
-  { t: "חמישה הרגלים של עסק מצליח", d: "ההבדל בין עסק ששורד לעסק שצומח טמון בשגרה הניהולית.", tag: "ניהול" },
-  { t: "שותפויות עסקיות: לפני שחותמים", d: "הסכם שותפות טוב נכתב ביום שכולם אוהבים זה את זה.", tag: "אסטרטגיה" },
-  { t: "תמחור נכון בלי לפחד", d: "איך מחשבים עלות אמיתית ומציבים מחיר שמשקף את הערך.", tag: "פיננסים" },
-  { t: "הבנק הוא שותף, לא אויב", d: "כך תנהלו שיחה עם הבנקאי ותשיגו תנאי אשראי טובים יותר.", tag: "מימון" },
-  { t: "מיזם ראשון: מה לבדוק", d: "רשימת בדיקה ליזמים לפני שמשקיעים את השקל הראשון.", tag: "יזמות" },
-];
-
 export function Articles({ limit = 6 }: { limit?: number }) {
   return (
     <section className="bg-muted">
@@ -169,14 +164,9 @@ export function Articles({ limit = 6 }: { limit?: number }) {
         <Eyebrow>מאמרים נבחרים</Eyebrow>
         <h2 className="mb-14 text-4xl font-bold md:text-5xl">ידע שמייצר ערך</h2>
         <div className="grid gap-6 md:grid-cols-3">
-          {articles.slice(0, limit).map((a) => (
-            <article key={a.t} className="group flex flex-col rounded-sm bg-card p-8 transition hover:shadow-elegant">
-              <span className="mb-4 w-fit text-xs font-bold tracking-widest text-gold">{a.tag}</span>
-              <h3 className="mb-3 text-2xl font-bold transition group-hover:text-slate">{a.t}</h3>
-              <p className="flex-1 leading-relaxed text-muted-foreground">{a.d}</p>
-            </article>
-          ))}
+          {articles.slice(0, limit).map((article) => <ArticleCard key={article.slug} article={article} />)}
         </div>
+        <div className="mt-10"><Button variant="outline" asChild><Link to="/articles">לכל המאמרים<ArrowLeft /></Link></Button></div>
       </div>
     </section>
   );

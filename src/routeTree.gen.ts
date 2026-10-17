@@ -15,6 +15,7 @@ import { Route as ArticlesRouteImport } from './routes/articles'
 import { Route as BookRouteImport } from './routes/book'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ArticlesSlugRouteImport } from './routes/articles_.$slug'
 import { Route as BookIndexRouteImport } from './routes/book/index'
 import { Route as BookChapter1RouteImport } from './routes/book/chapter-1'
 import { Route as BookChapter2RouteImport } from './routes/book/chapter-2'
@@ -52,6 +53,11 @@ const ContactRoute = ContactRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArticlesSlugRoute = ArticlesSlugRouteImport.update({
+  id: '/articles_/$slug',
+  path: '/articles/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BookIndexRoute = BookIndexRouteImport.update({
@@ -102,6 +108,7 @@ export interface FileRoutesByFullPath {
   '/book': typeof BookRouteWithChildren
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
   '/book/chapter-1': typeof BookChapter1Route
   '/book/chapter-2': typeof BookChapter2Route
   '/book/chapter-3': typeof BookChapter3Route
@@ -117,6 +124,7 @@ export interface FileRoutesByTo {
   '/articles': typeof ArticlesRoute
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
   '/book/chapter-1': typeof BookChapter1Route
   '/book/chapter-2': typeof BookChapter2Route
   '/book/chapter-3': typeof BookChapter3Route
@@ -134,6 +142,7 @@ export interface FileRoutesById {
   '/book': typeof BookRouteWithChildren
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
+  '/articles_/$slug': typeof ArticlesSlugRoute
   '/book/chapter-1': typeof BookChapter1Route
   '/book/chapter-2': typeof BookChapter2Route
   '/book/chapter-3': typeof BookChapter3Route
@@ -152,6 +161,7 @@ export interface FileRouteTypes {
     | '/book'
     | '/contact'
     | '/services'
+    | '/articles/$slug'
     | '/book/chapter-1'
     | '/book/chapter-2'
     | '/book/chapter-3'
@@ -167,6 +177,7 @@ export interface FileRouteTypes {
     | '/articles'
     | '/contact'
     | '/services'
+    | '/articles/$slug'
     | '/book/chapter-1'
     | '/book/chapter-2'
     | '/book/chapter-3'
@@ -183,6 +194,7 @@ export interface FileRouteTypes {
     | '/book'
     | '/contact'
     | '/services'
+    | '/articles_/$slug'
     | '/book/chapter-1'
     | '/book/chapter-2'
     | '/book/chapter-3'
@@ -200,6 +212,7 @@ export interface RootRouteChildren {
   BookRoute: typeof BookRouteWithChildren
   ContactRoute: typeof ContactRoute
   ServicesRoute: typeof ServicesRoute
+  ArticlesSlugRoute: typeof ArticlesSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -244,6 +257,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/articles_/$slug': {
+      id: '/articles_/$slug'
+      path: '/articles/$slug'
+      fullPath: '/articles/$slug'
+      preLoaderRoute: typeof ArticlesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/book/': {
@@ -336,6 +356,7 @@ const rootRouteChildren: RootRouteChildren = {
   BookRoute: BookRouteWithChildren,
   ContactRoute: ContactRoute,
   ServicesRoute: ServicesRoute,
+  ArticlesSlugRoute: ArticlesSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
