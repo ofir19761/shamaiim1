@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import portrait from "@/assets/ofir-levi-portrait.jpg.asset.json";
+import { Portrait } from "@/components/site/Portrait";
 
 export const Route = createFileRoute("/book/resume")({
   head: () => ({
@@ -23,11 +23,9 @@ function Resume() {
         <h1 className="mt-2 font-serif text-4xl font-bold sm:text-5xl">הרזומה שלי בקצרה</h1>
       </header>
 
-      <div className="grid gap-10 sm:grid-cols-[200px_1fr] sm:gap-12">
+      <div className="grid items-start gap-8 sm:grid-cols-[184px_minmax(0,1fr)] sm:gap-10">
         <div>
-          <div className="mx-auto aspect-[3/4] w-full max-w-xs overflow-hidden rounded-md border border-gold bg-card">
-            <img src={portrait.url} alt="אופיר לוי - מחבר הספר ערך מוסף" width={768} height={768} className="h-full w-full object-cover object-top" />
-          </div>
+          <Portrait compact alt="אופיר לוי - מחבר הספר ערך מוסף" />
           <p className="mt-3 text-center font-serif text-lg font-bold">אופיר לוי</p>
           <p className="text-center text-sm text-muted-foreground">רואה חשבון ויועץ עסקי</p>
         </div>
