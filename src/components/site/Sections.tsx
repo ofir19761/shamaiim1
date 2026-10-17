@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { WhatsAppIcon, WHATSAPP_URL } from "./WhatsApp";
 import { useState } from "react";
 import { z } from "zod";
 import { Compass, LineChart, Rocket, Feather, Quote, ArrowLeft, CheckCircle2, BookOpen } from "lucide-react";
@@ -205,6 +206,12 @@ export function ContactForm() {
         <p className="mb-8 text-lg leading-relaxed text-muted-foreground">ספרו לי בקצרה על העסק שלכם, ואחזור אליכם לתיאום פגישה ללא התחייבות.</p>
         <ul className="space-y-3 text-lg">
           <li><a href="tel:0545606843" dir="ltr" className="hover:text-gold">054-5606843</a></li>
+          <li>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-sm border border-gold/60 px-4 py-2 text-base font-semibold text-navy transition hover:bg-gold">
+              <WhatsAppIcon className="h-5 w-5" />
+              הודעה ב-WhatsApp
+            </a>
+          </li>
           <li><a href="mailto:Ofir@shamaiim.co.il" className="hover:text-gold">Ofir@shamaiim.co.il</a></li>
           <li>הבטחון 6, פתח תקווה</li>
         </ul>
