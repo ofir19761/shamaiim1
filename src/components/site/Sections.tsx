@@ -20,7 +20,7 @@ export function Hero() {
       <div className="pointer-events-none absolute -top-40 left-0 h-[500px] w-[500px] rounded-full bg-gold/10 blur-3xl" />
       <div className="relative mx-auto max-w-7xl px-6 py-28 md:py-40">
         <h1 className="max-w-3xl text-5xl font-bold leading-tight md:text-7xl">
-          להסתכל על העסק <span className="text-gold">מגבוה</span>.
+          להסתכל על העסק <span className="text-gold">מלמעלה</span>.
         </h1>
         <p className="mt-6 max-w-2xl text-xl leading-relaxed text-pearl/80">
           חיבור בין ראייה אסטרטגית רחבה לשליטה פיננסית מדויקת. ליווי אסטרטגי ומעשי מתוך ניסיון של מעל 20 שנה בניהול כספים בחברות המובילות במשק - כדי שתנהלו עסק קטן כמו עסק גדול.
