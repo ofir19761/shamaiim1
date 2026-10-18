@@ -59,7 +59,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-3">
         <div className="space-y-4">
           <Logo light />
-          <p className="text-pearl/70 leading-relaxed">ייעוץ עסקי, פיתוח עסקי ופיננסי בהובלת אופיר לוי - מעל 20 שנות ניסיון בניהול כספים בכיר.</p>
+          <p className="text-pearl/70 leading-relaxed">ייעוץ עסקי ופיננסי בהובלת אופיר לוי - מעל 20 שנות ניסיון בניהול כספים בכיר.</p>
         </div>
         <div>
           <h4 className="mb-4 text-lg text-gold">ניווט</h4>
