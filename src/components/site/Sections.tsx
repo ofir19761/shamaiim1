@@ -8,7 +8,7 @@ import { Portrait } from "@/components/site/Portrait";
 import { articles } from "@/content/articles";
 import { ArticleCard } from "@/components/site/ArticleCard";
 import { Button } from "@/components/ui/button";
-import book3d from "@/assets/book-3d.png.asset.json";
+const book3dUrl = `${import.meta.env.BASE_URL}images/book-3d.png`;
 
 function Eyebrow({ children }: { children: string }) {
   return <p className="mb-3 text-sm font-bold tracking-[0.2em] text-gold">{children}</p>;
@@ -101,7 +101,7 @@ export function About() {
 export function BookCover({ className = "" }: { className?: string }) {
   return (
     <img
-      src={book3d.url}
+      src={book3dUrl}
       alt={`הספר ${BOOK_TITLE} - ${BOOK_SUBTITLE}, מאת אופיר לוי`}
       width={596}
       height={776}
