@@ -174,8 +174,9 @@ const schema = z.object({
 export function ContactForm() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sent, setSent] = useState<string | null>(null);
+  const [sending, setSending] = useState(false);
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.currentTarget));
     const r = schema.safeParse(data);
@@ -186,7 +187,31 @@ export function ContactForm() {
       return;
     }
     setErrors({});
-    setSent(r.data.first);
+    setSending(true);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: "51ded682-3fd5-4f25-bc97-4ba7a3e7b548",
+          subject: `פנייה חדשה מהאתר - ${r.data.first} ${r.data.last}`,
+          from_name: "אתר שמיים",
+          "שם פרטי": r.data.first,
+          "שם משפחה": r.data.last,
+          "טלפון": r.data.phone,
+          email: r.data.email,
+          "הודעה": r.data.message,
+          botcheck: String(data.botcheck ?? ""),
+        }),
+      });
+      const json = await res.json();
+      if (!json.success) throw new Error();
+      setSent(r.data.first);
+    } catch {
+      setErrors({ form: "השליחה נכשלה. נסו שוב או פנו אליי בטלפון או ב-WhatsApp." });
+    } finally {
+      setSending(false);
+    }
   }
 
   const field = "w-full rounded-sm border border-input bg-background px-4 py-3 outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/20";
