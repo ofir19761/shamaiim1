@@ -258,7 +258,9 @@ export function ContactForm() {
               <textarea name="message" rows={5} className={field} />
               {errors['message'] && <span className="mt-1 block text-sm text-destructive">{errors['message']}</span>}
             </label>
-            <button className="w-full rounded-sm bg-navy py-4 font-bold text-pearl transition hover:bg-slate">שליחה</button>
+            <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
+            {errors['form'] && <p className="text-sm text-destructive">{errors['form']}</p>}
+            <button disabled={sending} className="w-full rounded-sm bg-navy py-4 font-bold text-pearl transition hover:bg-slate disabled:opacity-60">{sending ? "שולח..." : "שליחה"}</button>
           </form>
         )}
       </div>
