@@ -201,7 +201,7 @@ export function ContactForm() {
           "טלפון": r.data.phone,
           email: r.data.email,
           "הודעה": r.data.message,
-          botcheck: String(data.botcheck ?? ""),
+          botcheck: String(data["botcheck"] ?? ""),
         }),
       });
       const json = await res.json();
