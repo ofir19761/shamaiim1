@@ -14,7 +14,7 @@ function BookLayout() {
       <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-4 px-5 text-sm">
           <Link to="/" className="inline-flex items-center gap-2 rounded-sm bg-navy px-4 py-2 font-bold text-pearl transition hover:bg-slate">
-            <ArrowRight className="h-4 w-4" />חזרה לאתר שמיים
+            <ArrowRight className="h-4 w-4" />חזרה לאתר שמים
           </Link>
           <Link to="/book" className="hidden items-center gap-2 font-serif text-xl font-bold sm:flex"><BookOpen className="h-5 w-5 text-gold" />ערך מוסף</Link>
           <details ref={ref} className="relative">

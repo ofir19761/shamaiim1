@@ -195,7 +195,7 @@ export function ContactForm() {
         body: JSON.stringify({
           access_key: "51ded682-3fd5-4f25-bc97-4ba7a3e7b548",
           subject: `פנייה חדשה מהאתר - ${r.data.first} ${r.data.last}`,
-          from_name: "אתר שמיים",
+          from_name: "אתר שמים",
           "שם פרטי": r.data.first,
           "שם משפחה": r.data.last,
           "טלפון": r.data.phone,
