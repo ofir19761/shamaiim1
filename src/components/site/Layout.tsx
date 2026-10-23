@@ -14,7 +14,7 @@ const nav = [
 export function Logo({ light }: { light?: boolean }) {
   return (
     <Link to="/" className="flex items-baseline gap-2">
-      <span className={`font-serif text-2xl font-bold ${light ? "text-pearl" : "text-navy"}`}>שמיים</span>
+      <span className={`font-serif text-2xl font-bold ${light ? "text-pearl" : "text-navy"}`}>שמים</span>
       <span className="text-gold">|</span>
       <span className={`text-sm ${light ? "text-pearl/70" : "text-muted-foreground"}`}>ייעוץ עסקי ופיננסי</span>
     </Link>
@@ -78,7 +78,7 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-pearl/10 py-6 text-center text-sm text-pearl/50">© {new Date().getFullYear()} שמיים - ייעוץ עסקי ופיננסי. כל הזכויות שמורות לאופיר לוי.</div>
+      <div className="border-t border-pearl/10 py-6 text-center text-sm text-pearl/50">© {new Date().getFullYear()} שמים - ייעוץ עסקי ופיננסי. כל הזכויות שמורות לאופיר לוי.</div>
     </footer>
   );
 }

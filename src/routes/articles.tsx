@@ -12,7 +12,7 @@ export const Route = createFileRoute("/articles")({
     q: typeof search.q === "string" ? search.q : "",
     category: typeof search.category === "string" ? search.category : "",
   }),
-  head: () => meta("מאמרים עסקיים | שמיים - אופיר לוי", "56 מאמרים מקוריים מאת אופיר לוי על פיננסים ותזרים מזומנים, יזמות, ניהול עסק, שיווק ומכירות."),
+  head: () => meta("מאמרים עסקיים | שמים - אופיר לוי", "56 מאמרים מקוריים מאת אופיר לוי על פיננסים ותזרים מזומנים, יזמות, ניהול עסק, שיווק ומכירות."),
   component: ArticlesPage,
 });
 
@@ -27,7 +27,7 @@ function ArticlesPage() {
     <SiteShell>
       <section className="border-b border-border">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-20">
-          <p className="mb-4 text-sm font-bold text-slate">שמיים / ידע וניסיון</p>
+          <p className="mb-4 text-sm font-bold text-slate">שמים / ידע וניסיון</p>
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <h1 className="text-5xl font-bold md:text-6xl">מאמרים</h1>

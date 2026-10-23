@@ -9,11 +9,11 @@ export const Route = createFileRoute("/articles_/$slug")({
   beforeLoad: ({ params }) => { if (!findArticle(params.slug)) throw notFound(); },
   head: ({ params }) => {
     const article = findArticle(params.slug);
-    if (!article) return { ...meta("המאמר לא נמצא | שמיים", "המאמר המבוקש אינו זמין במאגר המאמרים של שמיים."), meta: [...meta("המאמר לא נמצא | שמיים", "המאמר המבוקש אינו זמין במאגר המאמרים של שמיים.").meta, { name: "robots", content: "noindex" }] };
+    if (!article) return { ...meta("המאמר לא נמצא | שמים", "המאמר המבוקש אינו זמין במאגר המאמרים של שמים."), meta: [...meta("המאמר לא נמצא | שמים", "המאמר המבוקש אינו זמין במאגר המאמרים של שמים.").meta, { name: "robots", content: "noindex" }] };
     return { meta: [
-      { title: `${article.title} | שמיים - אופיר לוי` },
+      { title: `${article.title} | שמים - אופיר לוי` },
       { name: "description", content: article.summary },
-      { property: "og:title", content: `${article.title} | שמיים` },
+      { property: "og:title", content: `${article.title} | שמים` },
       { property: "og:description", content: article.summary },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
